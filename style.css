@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #0F0F0F;
+    --theme-color: #9d0ac2;
+
+    --page-width: 1000px;
+    --base-padding: 16px;
+}
+
+*,
+*::before,
+*::after {
+    /* why set the color here? it sets everything: anchors, buttons, spans, whatever */
+    color: var(--theme-color);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    max-width: calc(var(--page-width) + 2 * var(--base-padding));
+    padding: calc(var(--base-padding) * 3) var(--base-padding);
+    margin: 0 auto;
+
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--base-padding) * 2);
+}
+
+#heading {
+    font-weight: 800;
+    font-size: 4rem;
+
+    width: 100%;
+    margin: 0 0 calc(var(--base-padding) * 1.25) 0;
+
+    overflow: hidden;
+}
+
+#heading span.stretch {
+    display: inline-block;
+    transform-origin: left center;
+}
+
+#uploadbox,
+button,
+.button {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    border: 1px ridge var(--theme-color);
+    text-decoration: none;
+    text-align: center;
+
+    padding: var(--base-padding);
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+#uploadbox {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--base-padding);
+    align-items: center;
+
+    margin: 0 2px;
+}
+
+button {
+    background-color: var(--primary-color);
+    margin: 0 2px;
+}
+
+#upload {
+    display: none;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--base-padding);
+}
+
+#controls > * {
+    flex: 1;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: var(--base-padding);
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+#uploadbox:hover,
+#uploadbox:active,
+button:hover,
+button:active,
+.button:hover,
+.button:active {
+    background-color: var(--theme-color);
+    color: var(--primary-color);
+}
+
+canvas {
+    max-width: 1024px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    aspect-ratio: 1;
+
+    border: 1px solid var(--theme-color);
+}

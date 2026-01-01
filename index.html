@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OddColours</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- logic -->
+    <script src="/logic/canvaseffects.js"></script>
+    <script defer src="/logic/generate.js"></script>
+    <script defer src="/logic/title.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="heading">
+            <span class="stretch">OddColours</span>
+        </h1>
+        <label for="upload" id="uploadbox">
+            <div class="inline">
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1H6L9 4H16V14H0V1Z" fill="currentColor"/>
+                </svg>
+                <p>...</p>
+            </div>
+            <span>BROWSE THE INDEXES FOR A SACRIFICE...</span>
+            <input type="file" id="upload">
+        </label>
+    </header>
+    <div id="controls">
+        <button id="export">SAVE YOUR ODD COLOURS</button>
+        <a id="useless" class="button" href="https://rick.nerial.uk/video.mp4">USELESS BUTTON</a>
+    </div>
+    <div id="render">
+        <canvas></canvas>
+        <div id="stats">
+            <p id="hash">#0000000000000000000000000000000000000000000000000000000000000000</p>
+            <p id="modules">SELECT A FILE AND FIND OUT</p>
+        </div>
+    </div>
+    <footer class="inline space-between">
+        <p id="legal">&copy; AHREE.XYZ 2026</p>
+        <a href="https://github.com/cyberahree/OddColours" target="_blank">GITHUB</a>
+    </footer>
+</body>
+</html>
